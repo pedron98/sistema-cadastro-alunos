@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Cadastro de Alunos</title>
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+		<!--Font Awesome-->
+		<script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+		<!--Script Local-->
+		<script src="app.js"></script>
+
+		<!--Estilo Personalizado-->
+		<style>
+
+			.form-control:focus {
+				border-color: orange;
+				box-shadow: 0 0 0 0.1em orange;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		
+		<!--Modal-->
+		<div class="modal fade" tabindex="-1" id="ModalCadastroAluno" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 id="modalTitle"></h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div id="modalBody">
+		       ...
+		      </div>
+		      <div class="modal-footer">
+		        <button id="btn" type="button" data-dismiss="modal"></button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!--Navbar-->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <div class="container">
+			  <a class="navbar-brand" href="#"><i style="font-size: 30px" class="far fa-id-card"></i></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="cadastro.html">Cadastro <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="consulta.html">Consulta</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</nav>
+
+		<!--Container-->
+		<div class="container mt-2">
+
+			<!--Jumbotron-->
+			<div class="jumbotron pt-3 pb-3">
+
+			<h1 class="display-4 mb-3">Registro de novo aluno</h1>	
+
+			<hr />
+
+			<div class="row">
+				
+				<div class="col-lg-3">
+					<input id="nome" type="text" class="form-control" placeholder="Digite o nome do aluno" autofocus>
+				</div>
+
+				<div class="col-lg-3">
+					<input id="disciplina" type="text" class="form-control" placeholder="Digite a disciplina">
+				</div>
+
+				<div class="col-lg-3">
+					<input id="nota1" type="text" class="form-control" placeholder="Digite a primeira nota">
+				</div>
+
+				<div class="col-lg-3">
+					<input id="nota2" type="text" class="form-control" placeholder="Digite a segunda nota">
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row justify-content-end">
+					<div>
+						<div class="d-flex col">
+							<button id="btn" onclick="cadastrarAluno()" type="button" class="btn btn-warning"><i class="fas fa-plus"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			</div><!--/ fim Jumbotron-->
+
+		</div><!--/ fim container-->
+		
+	</body>
+</html>
