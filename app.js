@@ -179,7 +179,7 @@ function cadastrarAluno(){
 
 		let modaBody = document.getElementById('modalBody')
 		modalBody.className = `modal-body`
-		modalBody.innerHTML = 'O aluno foi cadastrado no sistema.'
+		modalBody.innerHTML = 'Aluno cadastrado no sistema.'
 
 		let button = document.getElementById('btn')
 		button.className = `btn btn-success`
