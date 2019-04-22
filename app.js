@@ -349,7 +349,7 @@ function pesquisarAlunos(){
 
 setTimeout(function(){
 	exibeAviso()
-}, 30000)
+}, 50000)
 
 function exibeAviso(){
 	$('#ModalAviso').modal('show')
