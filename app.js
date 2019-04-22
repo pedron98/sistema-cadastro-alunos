@@ -334,9 +334,9 @@ function carregarListaAlunos( alunos = Array(), filtro = false){
 
 function pesquisarAlunos(){
 
-	let nome = document.getElementById('nome').value
+	let nome = document.getElementById('nome-aluno').value
 	let media = document.getElementById('media').value
-	let disciplina = document.getElementById('disciplina').value
+	let disciplina = document.getElementById('disciplina-aluno').value
 	let situacao = document.getElementById('situacao').value
 
 	let aluno = new AlunoFiltro(nome, media, disciplina, situacao)
